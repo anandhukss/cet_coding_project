@@ -6,13 +6,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ColorPickerModule } from 'ngx-color-picker';
 import { QuilleditorComponent } from './quilleditor/quilleditor.component';
-import { OutputComponent } from './output/output.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     QuilleditorComponent,
-    OutputComponent
   ],
   imports: [
     BrowserModule,
