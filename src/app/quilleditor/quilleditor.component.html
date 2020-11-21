@@ -1,0 +1,26 @@
+<div class="container1">
+
+    <div class="col-md-6 editor">
+        <quill-editor (onEditorChanged)="changedEditor($event)" [styles]="{height: '60vh'}"></quill-editor></div>
+
+    <div class="output">
+        <header>
+            <h3>Header</h3>
+        </header>
+        <div id="output-page" [style.background]="color" >
+            <quill-view [content]="htmlData"></quill-view>
+        </div>
+    </div>
+</div>
+<div class="buttons">
+    <div>
+        <label style="font-weight: bold;">Choose a background color :</label>
+    <input   [(colorPicker)]="color" [style.background]="color"/>
+    </div>
+    <div>
+        
+    <label style="font-weight: bold;">Choose a background background image :</label>
+    <input type="file" (change)="loadFile($event)" >
+ </div>
+</div>
+    
