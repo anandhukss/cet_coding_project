@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import {HttpClient} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -6,7 +7,8 @@ import { Injectable } from '@angular/core';
 export class ShareDataService {
 color:String;
 htmlData:String;
-  constructor() { }
+public url="https://tblgi4jzc6.execute-api.ap-south-1.amazonaws.com/latest/hello";
+  constructor(private http:HttpClient) { }
   setData(color,htmlData){
     this.color=color;
     this.htmlData=htmlData;
@@ -17,5 +19,9 @@ htmlData:String;
       "html":this.htmlData
     }
 
+  }
+
+  connectApi(){
+    return this.http.get(this.url)
   }
 }
